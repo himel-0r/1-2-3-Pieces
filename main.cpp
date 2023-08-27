@@ -5,6 +5,8 @@
 #include "t4_head.h"
 #include "variabl.h"
 
+#include <iostream>
+
 using namespace std;
 
 SDL_Window *window;
@@ -402,7 +404,7 @@ int main(int argc, char **argv)
             {
                 SDL_Rect title_rect = {0, 0, 1200, 800};
                 SDL_RenderCopy(renderer, title, NULL, &title_rect);
-                SDL_RenderPresent(renderer);
+                //SDL_RenderPresent(renderer);
 
                 /////////
                 if (mouse_x >= 405 && mouse_x <= 795 && mouse_y >= 150 && mouse_y <= 280)
@@ -410,42 +412,42 @@ int main(int argc, char **argv)
                     // egg
                     SDL_Rect eggcoverboro = {385, 130, 430, 170};
                     SDL_RenderCopy(renderer, eggfry_cover, NULL, &eggcoverboro);
-                    SDL_RenderPresent(renderer);
+                    //SDL_RenderPresent(renderer);
                 }
                 if (mouse_x >= 405 && mouse_x <= 795 && mouse_y >= 345 && mouse_y <= 470)
                 {
                     // t3
                     SDL_Rect t3onekboro = {385, 325, 430, 165};
                     SDL_RenderCopy(renderer, ttt3_cover, NULL, &t3onekboro);
-                    SDL_RenderPresent(renderer);
+                    //SDL_RenderPresent(renderer);
                 }
                 if (mouse_x >= 405 && mouse_x <= 795 && mouse_y >= 520 && mouse_y <= 655)
                 {
                     // t4
                     SDL_Rect t4onekboro = {385, 500, 430, 175};
                     SDL_RenderCopy(renderer, ttt4_cover, NULL, &t4onekboro);
-                    SDL_RenderPresent(renderer);
+                    //SDL_RenderPresent(renderer);
                 }
                 if (mouse_x >= 1045 && mouse_x <= 1140 && mouse_y >= 60 && mouse_y <= 135)
                 {
                     // credit
                     SDL_Rect creditvbohutboro = {1045, 50, 100, 100};
                     SDL_RenderCopy(renderer, credit_cover, NULL, &creditvbohutboro);
-                    SDL_RenderPresent(renderer);
+                    //SDL_RenderPresent(renderer);
                 }
                 if (mouse_x >= 50 && mouse_x <= 125 && mouse_y >= 695 && mouse_y <= 765)
                 {
                     // info
                     SDL_Rect amarinfoonekboro = {40, 685, 95, 90};
                     SDL_RenderCopy(renderer, info_cover, NULL, &amarinfoonekboro);
-                    SDL_RenderPresent(renderer);
+                    //SDL_RenderPresent(renderer);
                 }
                 if (mouse_x >= 1055 && mouse_x <= 1135 && mouse_y >= 680 && mouse_y <= 720)
                 {
                     // exit
                     SDL_Rect amardorjaonekboro = {1055, 650, 100, 80};
                     SDL_RenderCopy(renderer, exit_cover, NULL, &amardorjaonekboro);
-                    SDL_RenderPresent(renderer);
+                    //SDL_RenderPresent(renderer);
                 }
                 /////////
 
@@ -514,6 +516,7 @@ int main(int argc, char **argv)
                         mouse_down = false;
                         mouse_released = false;
                         mouse_pressed = false;
+                        SDL_RenderClear(renderer);
                     }
                     else if (mouseDownX >= 50 && mouseDownX <= 125 && mouseDownY >= 695 && mouseDownY <= 765)
                     {
@@ -524,6 +527,7 @@ int main(int argc, char **argv)
                         mouse_down = false;
                         mouse_released = false;
                         mouse_pressed = false;
+                        SDL_RenderClear(renderer);
                     }
                     else if (mouseDownX >= 1055 && mouseDownX <= 1135 && mouseDownY >= 680 && mouseDownY <= 720)
                     {
@@ -756,7 +760,7 @@ int main(int argc, char **argv)
                             SDL_Rect goh_rect = {400, 250, 400, 300};
                             SDL_RenderCopy(renderer, goh, NULL, &goh_rect);
                             Draw_Font(renderer, score, 640, 330, 74, 32, 32, {255, 255, 255});
-                            SDL_RenderPresent(renderer);
+                            //SDL_RenderPresent(renderer);
                         }
                         else
                         {
@@ -764,20 +768,21 @@ int main(int argc, char **argv)
                             SDL_RenderCopy(renderer, gon, NULL, &gon_rect);
                             Draw_Font(renderer, score, 640, 297, 74, 32, 32, {255, 255, 255});
                             Draw_Font(renderer, hs, 640, 330, 74, 32, 32, {255, 255, 255});
-                            SDL_RenderPresent(renderer);
+                            //SDL_RenderPresent(renderer);
                         }
                         if (mouse_x >= 465 && mouse_x <= 582 && mouse_y >= 440 && mouse_y <= 469)
                         {
                             SDL_Rect rtry_rect = {462, 438, 123, 33};
                             SDL_RenderCopy(renderer, rtry, NULL, &rtry_rect);
-                            SDL_RenderPresent(renderer);
+                            //SDL_RenderPresent(renderer);
                         }
                         else if (mouse_x >= 618 && mouse_x <= 736 && mouse_y >= 440 && mouse_y <= 469)
                         {
                             SDL_Rect qut_rect = {615, 438, 123, 33};
                             SDL_RenderCopy(renderer, qut, NULL, &qut_rect);
-                            SDL_RenderPresent(renderer);
+                            //SDL_RenderPresent(renderer);
                         }
+                        SDL_RenderPresent(renderer);
 
                         if (mouse_pressed)
                         {
@@ -839,15 +844,15 @@ int main(int argc, char **argv)
 
                 SDL_Rect wh_rect = {100, 100, 605, 605};
                 SDL_RenderCopy(renderer, wh, NULL, &wh_rect);
-                SDL_RenderPresent(renderer);
+                //SDL_RenderPresent(renderer);
 
                 SDL_SetRenderDrawColor(renderer, 255, 255, 200, 0);
                 SDL_RenderFillRect(renderer, &tspace);
-                SDL_RenderPresent(renderer);
+                //SDL_RenderPresent(renderer);
 
                 SDL_Rect turn_b = {800, 200, 300, 50};
                 SDL_RenderCopy(renderer, blue_turn, NULL, &turn_b);
-                SDL_RenderPresent(renderer);
+                //SDL_RenderPresent(renderer);
 
                 SDL_SetRenderDrawColor(renderer, 255, 165, 80, 0);
                 for (int i = 0; i < 3; i++)
@@ -855,9 +860,10 @@ int main(int argc, char **argv)
                     for (int j = 0; j < 3; j++)
                     {
                         SDL_RenderFillRect(renderer, &box[i][j].r);
-                        SDL_RenderPresent(renderer);
+                        //SDL_RenderPresent(renderer);
                     }
                 }
+                SDL_RenderPresent(renderer);
                 bool running = true;
                 SDL_Event event;
                 bool mousedown = false;
@@ -994,19 +1000,20 @@ int main(int argc, char **argv)
 
                 SDL_SetRenderDrawColor(renderer, 255, 255, 200, 0);
                 SDL_RenderFillRect(renderer, &tspace);
-                SDL_RenderPresent(renderer);
+                // SDL_RenderPresent(renderer);
 
                 SDL_Rect turn_b = {800, 200, 300, 50};
                 SDL_RenderCopy(renderer, blue_turn, NULL, &turn_b);
-                SDL_RenderPresent(renderer);
+                // SDL_RenderPresent(renderer);
 
                 SDL_SetRenderDrawColor(renderer, 255, 165, 80, 0);
                 for (int i = 0; i < N; i++)
                 {
                     for (int j = 0; j < N; j++)
                     {
+                        std::cerr << box[i][j].r.x << " " << box[i][j].r.y << " " << i << " " << j << "\n";
                         SDL_RenderFillRect(renderer, &box[i][j].r);
-                        SDL_RenderPresent(renderer);
+                        // SDL_RenderPresent(renderer);
                     }
                 }
 
@@ -1099,11 +1106,13 @@ int main(int argc, char **argv)
             }
             else if (gameover == 4)
             {
+                
+                
                 SDL_Rect info_rect = {0, 0, 1200, 800};
                 SDL_RenderCopy(renderer, info, NULL, &info_rect);
                 SDL_Rect home_button = {1085, 685, 65, 65};
                 SDL_RenderCopy(renderer, homeSprite, NULL, &home_button);
-                SDL_RenderPresent(renderer);
+                
                 if (mouse_pressed)
                 {
                     if (mouse_x >= 1085 && mouse_x <= 1150 && mouse_y >= 685 && mouse_y <= 750)
@@ -1112,17 +1121,22 @@ int main(int argc, char **argv)
                         TITLEScreen = true;
                         bl1 = false;
                         gameover = 0;
+                        credit=0;
                     }
                     mouse_pressed=false;
                 }
+                SDL_RenderPresent(renderer);
+                //SDL_RenderClear(renderer);
             }
             else if (gameover == 5)
             {
+                
                 SDL_Rect cc_rect = {0, 0, 1200, 800};
                 SDL_RenderCopy(renderer, cc, NULL, &cc_rect);
+                //SDL_RenderPresent(renderer);
                 SDL_Rect home_button = {1090, 685, 65, 65};
                 SDL_RenderCopy(renderer, homeSprite, NULL, &home_button);
-                SDL_RenderPresent(renderer);
+                
                 if (mouse_pressed)
                 {
                     if (mouse_x >= 1090 && mouse_x <= 1155 && mouse_y >= 685 && mouse_y <= 750)
@@ -1131,9 +1145,12 @@ int main(int argc, char **argv)
                         TITLEScreen = true;
                         bl1 = false;
                         gameover = 0;
+                        credit=0;
                     }
                     mouse_pressed=false;
                 }
+                SDL_RenderPresent(renderer);
+                
             }
         }
     }
